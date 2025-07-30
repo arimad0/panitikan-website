@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ang Sumpa ng Pinya</title>
+
+    <link rel="icon" type="image/x-icon" href="https://placehold.co/32x32/000000/ff0000.png?text=👁️">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Cinzel:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <header id="intro-scene">
+        <h1>Ang Alamat ng Pinya</h1>
+        <h2>Isang Alamat</h2>
+        <div class="scroll-indicator">Magpatuloy</div>
+    </header>
+   <div class="pineapple-wrapper"> 
+        <main class="content-block">
+            <section class="story-section fade-in">
+                <h3>Ang Mag-ina</h3>
+                <p>Noong unang panahon may nakatirang mag-ina sa isang malayong pook. Ang ina ay si Aling Rosa at ang anak ay si Pinang. Mahal na mahal ni Aling Rosa ang kanyang bugtong na anak. Kaya lumaki si Pinang sa layaw. Gusto ng ina na matuto si Pinang ng mga gawaing bahay, ngunit laging ikinakatwiran ni Pinang na alam na niyang gawin ang mga itinuturo ng ina. Kaya't pinabayaan na lang niya ang kanyang anak.</p>
+            </section>
+
+            <section class="story-section fade-in">
+                <div class="image-container clickable-image">
+                    <img 
+                        src="https://placehold.co/800x500/2a2a2a/cccccc.png?text=PINANG" 
+                        alt="Si Pinang bago ang sumpa"
+                        data-description="Si Pinang, isang dalagita na lumaki sa layaw, ay walang kamalay-malay sa sumpang nag-aabang.">
+                </div>
+            </section>
+
+            <section class="story-section fade-in">
+                <h3>Ang Sumpa</h3>
+                <p>Isang araw nagkasakit si Aling Rosa. Hindi siya makabangon at makagawa ng gawaing bahay. Inutusan niya si Pinang na magluto ng lugaw. Isinalang ni Pinang ang lugaw ngunit napabayaan dahil sa kalalaro. Ang lugaw ay dumikit sa palayok at nasunog. Nagpasensiya na lang si Aling Rosa, napagsilbihan naman siya kahit paano ng anak.</p>
+                <p>Nagtagal ang sakit ni Aling Rosa kaya't napilitang si Pinang ang gumagawa sa bahay. Isang araw, sa kanyang pagluluto hindi niya makita ang posporo. Tinanong ang kanyang ina kung nasaan ito. Isang beses naman ay ang sandok ang hinahanap. Ganoon ng ganoon ang nangyayari. Walang bagay na di makita at agad tinatanong ang kanyang ina. Nayamot si Aling Rosa sa katatanong ng anak kaya´t nawika nito: "Naku! Pinang, sana'y magkaroon ka ng maraming mata upang makita mo ang lahat ng bagay at hindi ka na tanong nang tanong sa akin."</p>
+            </section>
+
+            <section class="story-section fade-in">
+                <div class="image-container clickable-image">
+                    <img 
+                        src="https://placehold.co/800x500/1a1a1a/cccccc.png?text=SUMPA" 
+                        alt="Ang pagbigkas ng sumpa"
+                        data-description="'Sana'y magkaroon ka ng maraming mata!' Ang mga salita ng isang ina, puno ng pagkayamot, ay nagbigay-buhay sa isang 'di inaasahang pagbabago.">
+                </div>
+            </section>
+            
+            <section class="story-section fade-in">
+                <h3>Ang Pagbabago</h3>
+                <p>Dahil alam niyang galit na ang kanyang ina ay di na umimik si Pinang. Umalis siya upang hanapin ang sandok na hinahanap. Kinagabihan, wala si Pinang sa bahay. Nabahala si Aling Rosa. Tinatawag niya ang anak ngunit walang sumasagot. Napilitan siyang bumangon at naghanda ng pagkain.</p>
+                <p>Pagkaraan ng ilang araw ay magaling-galing na si Aling Rosa. Hinanap niya si Pinang. Tinanong niya ang mga kapitbahay kung nakita nila ang kanyang anak. Ngunit naglahong parang bula si Pinang. Hindi na nakita ni Aling Rosa si Pinang.</p>
+                <p>Isang araw, may nakitang halaman si Aling Rosa sa kanyang bakuran. Hindi niya alam kung anong uri ang halamang iyon. Inalagaan niyang mabuti hanggang sa ito'y magbunga. Laking pagkamangha ni Aling Rosa ng makita ang anyo ng bunga nito. Ito'y hugis-ulo ng tao at napapalibutan ng mata.</p>
+            </section>
+
+            <section class="story-section fade-in">
+                <div class="image-container clickable-image">
+                    <img 
+                        src="https://placehold.co/800x500/000000/cccccc.png?text=MATA" 
+                        alt="Ang naging anyo ni Pinang"
+                        data-description="Sa anyo ng isang prutas, ang mga mata ni Pinang ay natagpuan. Isang paalala ng isang sumpang nagmula sa pagmamahal at pagkadismaya.">
+                </div>
+            </section>
+
+            <section class="story-section fade-in">
+                <p>Biglang naalaala ni Aling Rosa ang huli niyang sinabi kay Pina, na sana'y magkaroon ito ng maraming mata para makita ang kanyang hinahanap. Tahimik na nanangis si Aling Rosa at laking pagsisisi dahil tumalab ang kanyang sinabi sa anak. Inalagaan niyang mabuti ang halaman at tinawag itong Pinang. Sa palipat-lipat sa bibig ng mga tao ang "Pinang" ay naging "Pinya".</p>
+            </section>
+        </main>
+   </div>
+    <div id="imageModal" class="modal">
+        <span class="close-button">×</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Enlarged view">
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
