@@ -70,16 +70,19 @@ body.cursor-hover .cursor-dot {
     width: 50px;
     height: 50px;
 }
-body.modal-is-open * {
-    cursor: auto;
+
+body.image-hover .cursor-ring {
+    width: 120px; 
+    height: 120px;
+    border-width: 3px; 
+    border-color: rgba(255, 255, 255, 0.3); 
 }
 
-body.modal-is-open .cursor-ring,
-body.modal-is-open .cursor-dot {
-    display: none;
+body.image-hover .cursor-dot {
+    width: 120px;
+    height: 120px;
 }
 
-/* --- THE CENTRAL CONTENT AREA --- */
 .pineapple-wrapper {
     position: relative;
     max-width: 900px; 
@@ -96,14 +99,12 @@ body.modal-is-open .cursor-dot {
     width: 300px; 
     height: 150px; 
     z-index: 5;
-    
     background-image:
         radial-gradient(ellipse 40px 120px at 50% 100%, var(--pineapple-green) 98%, transparent 100%),
         radial-gradient(ellipse 35px 100px at 35% 100%, var(--pineapple-green) 98%, transparent 100%),
         radial-gradient(ellipse 35px 100px at 65% 100%, var(--pineapple-green) 98%, transparent 100%),
         radial-gradient(ellipse 30px 85px at 15% 100%, var(--pineapple-green) 98%, transparent 100%),
         radial-gradient(ellipse 30px 85px at 85% 100%, var(--pineapple-green) 98%, transparent 100%);
-    
     background-repeat: no-repeat;
 }
 
@@ -155,8 +156,6 @@ body.modal-is-open .cursor-dot {
 #intro-scene h1 {
     font-family: var(--font-title);
     font-size: clamp(4rem, 15vw, 9rem);
-    color: var(--pineapple-yellow);
-    position: relative;
     animation: red-glow 5s infinite ease-in-out;
 }
 @keyframes red-glow {
@@ -233,7 +232,6 @@ body.modal-is-open .cursor-dot {
 }
 .fade-in.is-visible { opacity: 1; transform: translateY(0); }
 
-/* --- MODAL CSS --- */
 .modal {
     display: none;
     position: fixed;
@@ -305,7 +303,62 @@ body.modal-is-open .cursor-dot {
     text-decoration: none;
 }
 
+.story-section.no-border {
+    border-bottom: none;
+}
 
+.story-section:last-of-type {
+    padding-top: 8rem;
+}
+.page-footer {
+    padding: 6rem 2rem;
+    color: #aaa;
+    text-align: center;
+}
+
+.page-footer h3 {
+    font-family: var(--font-heading);
+    color: var(--pineapple-yellow);
+    font-size: 2.5rem;
+    margin-bottom: 4rem; 
+}
+
+.creators-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem; 
+    flex-wrap: wrap; 
+}
+
+.creator-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+}
+
+.creator-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 3px solid #444; 
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.creator-profile p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.creator-profile .creator-role {
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+    font-weight: normal;
+}
 @media (max-width: 768px) {
     body { cursor: auto; }
     .cursor-ring, .cursor-dot { display: none; }

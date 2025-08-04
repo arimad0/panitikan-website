@@ -12,10 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const interactiveElements = document.querySelectorAll(
-        'a, h1, h2, h3, .clickable-image, .scroll-indicator, .close-button, .modal-content'
+    const imageContainers = document.querySelectorAll('.clickable-image, #modalImage');
+    imageContainers.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('image-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('image-hover'));
+    });
+
+    const otherInteractiveElements = document.querySelectorAll(
+        'a, h1, h2, h3, .scroll-indicator, .close-button, .modal-content'
     );
-    interactiveElements.forEach(el => {
+    otherInteractiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
         el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
     });
@@ -88,4 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    const storyStart = document.getElementById('story-begins');
+
+    if (scrollIndicator && storyStart) {
+        scrollIndicator.addEventListener('click', () => {
+            storyStart.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    }
+
 });
